@@ -133,27 +133,27 @@ public class WordCounter
 				System.out.println("Insert Completed.");
 			}
 		}
-	
-	//Get connection to word_occurances database
+		
+		//Get connection to word_occurances database
 
-	public static Connection getConnection() throws Exception{
-		try {
-			String driver = "com.mysql.cj.jdbc.Driver";
-			String url = "jdbc:mysql://127.0.0.1:3306/word_occurances?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-			String username = "gary";
-			String password = "gary";
-			Class.forName(driver);
+		public static Connection getConnection() throws Exception{
+			try {
+				String driver = "com.mysql.cj.jdbc.Driver";
+				String url = "jdbc:mysql://127.0.0.1:3306/word_occurances?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+				String username = "root";
+				String password = "";
+				Class.forName(driver);
 
-			Connection conn = DriverManager.getConnection(url, username, password);
-			System.out.println("Connected");
-			return conn;
+				Connection conn = DriverManager.getConnection(url, username, password);
+				System.out.println("Connected");
+				return conn;
 
-		}catch(Exception e) {System.out.println(e);
+			}catch(Exception e) {System.out.println(e);
 
-		return null;
+			return null;
+			}
 		}
-
-
-
-	}
+		
+		
+	
 }//complete class
